@@ -1,7 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './assests/images/logo.svg';
+import './assests/css/App.css';
 
 function App() {
+
+  //jsx
   return (
     <div className="App">
       <header className="App-header">
