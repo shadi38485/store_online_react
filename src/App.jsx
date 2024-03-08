@@ -2,6 +2,7 @@ import "./assests/css/App.css";
 // import {Header, sum} from "./components/Header";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 // class components
 // function components ----> a function that return jsx & have some options (hooks---> hellper function)
@@ -20,6 +21,7 @@ function App() {
     <div>
       <Header />
       <Footer />
+      <Navbar/>
     </div>
   );
 }
