@@ -8,12 +8,16 @@
 
 // export default Navbar
 
-import React from 'react'
+import React from "react";
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
-  )
-}
+    <>
+      <a href="">Home</a>
+      <a href="">About Us</a>
+      <a href="">Contact Us</a>
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;

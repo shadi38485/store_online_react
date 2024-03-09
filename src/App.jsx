@@ -3,10 +3,11 @@ import "./assests/css/App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import ProductList from "./components/ProductList";
 
 // class components
 // function components ----> a function that return jsx & have some options (hooks---> hellper function)
-// jsx: js {} , read variables, ternary operator(if), map(loop), ()=>{}
+// jsx: root,   js {} , read variables, ternary operator(if), map(loop), ()=>{}
 
 function App() {
   const title = "Shadi App";
@@ -22,6 +23,7 @@ function App() {
       <Header />
       <Footer />
       <Navbar/>
+      <ProductList/>
     </div>
   );
 }
