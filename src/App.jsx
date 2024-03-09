@@ -1,7 +1,6 @@
-import "./assests/css/App.css";
-// import {Header, sum} from "./components/Header";
+import "./assets/css/App.css";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 

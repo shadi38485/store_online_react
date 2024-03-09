@@ -1,0 +1,9 @@
+footer{
+     background: black;
+     padding: 4rem;
+}
+.copy-right {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.664);
+  font-size: 9px;
+}

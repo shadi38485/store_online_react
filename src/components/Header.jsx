@@ -1,22 +1,5 @@
-// function Header() {
-//   return(
-//     <header>
-//         <h1>Header</h1>
-//     </header>
-//   )  
-// }
-
-// // function sum(x,y) {
-// //   return x+y
-// // }
-
-
-// // export  {Header, sum}
-// export default Header
-
-
 import React from 'react'
-import logo from "../assests/images/logo.svg"
+import logo from "../assets/images/logo.svg"
 
 const Header = () => {
 
@@ -62,4 +45,6 @@ const Header = () => {
 
 export default Header
 
-
+// function sum(x,y) {
+//   return x+y
+// }
