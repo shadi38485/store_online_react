@@ -11,18 +11,16 @@ import ProductList from "./components/ProductList";
 function App() {
   const title = "Shadi App";
   const age = 16;
-  console.log(title, age);
-
   // sum(30,50)
-  // Header()
-  // Foter()
+  // Header(30, 50)
 
+//Properties ---> props
   return (
     <div>
-      <Header />
+      <Header x="30" y="50" />
       <Footer />
-      <Navbar/>
-      <ProductList/>
+      <Navbar title={title} age={age} />
+      <ProductList />
     </div>
   );
 }
