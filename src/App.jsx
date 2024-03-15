@@ -2,7 +2,7 @@ import "./assets/css/App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar";
-import ProductList from "./components/ProductList";
+import ProductList from "./components/ProductList/ProductList";
 
 // class components
 // function components ----> a function that return jsx & have some options (hooks---> hellper function)
@@ -18,11 +18,24 @@ function App() {
   return (
     <div>
       <Header x="30" y="50" />
-      <Footer />
       <Navbar title={title} age={age} />
       <ProductList />
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
+
+
+const profile={
+  fn:"Zahra",
+  age:19,
+  address:{country: "Iran", city:"Isfahan"},
+  hobbies:["gym", "books", "music"],
+
+  getBirthYear:function () {
+    return 2024-profile.age
+  }
+}

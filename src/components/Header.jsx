@@ -11,7 +11,7 @@ const Header = ({ x, y }) => {
           <img src={logo} alt="" height="100px" width="100px" />
         </a>
       </div>
-
+      <h1>{x+y}</h1>
       <nav className="top-nav">
         <a className="nav-link" href="">
           Store

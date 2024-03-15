@@ -1,0 +1,22 @@
+.product-list{
+    display: flex;
+     margin-bottom: 100px;
+}
+.product-card{
+    text-align: center;
+    width: 200px;
+    /* height: 400px; */
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 10px  rgba(0, 0, 0, 0.164) ;
+    overflow: hidden;
+}
+.product-card img{
+    /* width: 100%; */
+}
+.product-card .product-properties{
+    padding: 15px;
+}
+.product-card .product-price{
+    color: rgb(78, 78, 78);
+}
