@@ -20,3 +20,24 @@
 .product-card .product-price{
     color: rgb(78, 78, 78);
 }
+
+.product-card-footer{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-card-footer button{
+    background-color: dodgerblue;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.bg-white{
+    background-color: white;
+}
+.bg-green{
+    background-color: rgb(0, 168, 0);
+}
