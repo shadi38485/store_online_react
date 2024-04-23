@@ -1,25 +1,25 @@
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "./assets/css/App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar";
+import Header from "./components/layout/Header/Header";
+import Footer from "./components/layout/Footer/Footer";
+import Navbar from "./components/layout/Navbar";
 import ProductList from "./components/ProductList/ProductList";
-
-// class components
-// function components ----> a function that return jsx & have some options (hooks---> hellper function)
-// jsx: root,   js {} , read variables, ternary operator(if), map(loop), ()=>{}
+import { useState } from "react";
 
 function App() {
-  const title = "Shadi App";
-  const age = 16;
-  // sum(30,50)
-  // Header(30, 50)
+  const [totalQty, setTotalQty] = useState(0);
 
-//Properties ---> props
+  const totalQtyManagement = () => {
+    setTotalQty(totalQty + 1);
+  };
+
+  //useContext
+  // Redux
   return (
     <div>
-      <Header x="30" y="50" />
-      <Navbar title={title} age={age} />
-      <ProductList />
+      <Header totalQty={totalQty} />
+      <Navbar />
+      <ProductList totalQtyManagement={totalQtyManagement} />
       <Footer />
     </div>
   );
@@ -27,15 +27,13 @@ function App() {
 
 export default App;
 
+const profile = {
+  fn: "Zahra",
+  age: 19,
+  address: { country: "Iran", city: "Isfahan" },
+  hobbies: ["gym", "books", "music"],
 
-
-const profile={
-  fn:"Zahra",
-  age:19,
-  address:{country: "Iran", city:"Isfahan"},
-  hobbies:["gym", "books", "music"],
-
-  getBirthYear:function () {
-    return 2024-profile.age
-  }
-}
+  getBirthYear: function () {
+    return 2024 - profile.age;
+  },
+};

@@ -1,0 +1,35 @@
+.header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: rgb(7, 0, 32);
+   padding: 0 1rem;
+}
+.top-nav{
+    display: flex;
+}
+.top-nav a{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+}
+.top-nav a:hover{
+    text-decoration: underline;
+}
+.icons{
+    font-size: 1.5rem;
+    display: flex;
+    color: white;
+    align-items: center;
+}
+.cart{
+    margin-left: 1rem;
+}
+.register{
+    font-size: 1.8rem;
+}
+.qty-total{
+    color: red;
+    font-size: 1rem;
+}

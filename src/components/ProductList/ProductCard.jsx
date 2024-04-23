@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 
-const ProductCard = ({ id, img, title, price }) => {
-  // let qty = 0;
-  const [qty, setQty]= useState(0)
-  const [bg, setBg] = useState("bg-green")
+const ProductCard = ({ id, img, title, price, totalQtyManagement }) => {
+  const [qty, setQty] = useState(0);
+  const [bg, setBg] = useState("bg-white");
 
-  // const fn = "Zahra"
-  // const ln = "Yazdani"
-  // const age = 34
-
-  // const result= "I'm "+ fn + " "+ ln + ".I'm "+ age+"!!"
-  // const result2= `I'm ${fn ? "Admin": fn} ${ln}. I'm ${age}!! `
 
 
   const addToCard = () => {
-    // qty++;// qty= qty+1
-    setQty(qty+1)
+    setQty(qty + 1);
     console.log(qty);
+    totalQtyManagement()
+  };
+  const toggleBg = () => {
+    if (bg == "bg-white") {
+      // bg="bg-green"
+      setBg("bg-green");
+    } else {
+      setBg("bg-white");
+    }
   };
 
   return (
@@ -29,6 +30,9 @@ const ProductCard = ({ id, img, title, price }) => {
       <div className="product-card-footer">
         <button className="" onClick={addToCard}>
           Add To Card
+        </button>
+        <button className="btn-bg" onClick={toggleBg}>
+          Change Bg
         </button>
         <span>{qty}</span>
       </div>
