@@ -6,6 +6,10 @@ import Navbar from "./components/layout/Navbar";
 import ProductList from "./components/ProductList/ProductList";
 import { useState } from "react";
 
+// api fetch()
+// useEffect
+// form
+
 function App() {
   const [totalQty, setTotalQty] = useState(0);
 

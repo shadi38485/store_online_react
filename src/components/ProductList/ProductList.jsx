@@ -1,31 +1,26 @@
-import React from 'react'
-import "./ProductList.css"
-import ProductCard from './ProductCard';
+import React, { useState } from "react";
+import "./ProductList.css";
+import ProductCard from "./ProductCard";
+// import productsData from "../../data/productsData";
+
+
+// sync: callback, Promise, async & await
 
 const ProductList = ({ totalQtyManagement }) => {
-  const productsData = [
-    {
-      id: 1,
-      image:
-        "https://m.media-amazon.com/images/I/21--f3wS6SL._AC_UF226,226_FMjpg_.jpg",
-      title: "Hedphone",
-      price: 1000,
-    },
-    {
-      id: 2,
-      image:
-        "https://m.media-amazon.com/images/I/81S9AlFMHaL._AC_UF226,226_FMjpg_.jpg",
-      title: "T-shirt",
-      price: 400,
-    },
-    {
-      id: 3,
-      image:
-        "https://m.media-amazon.com/images/I/41UPo0WJwvL._AC_UF226,226_FMjpg_.jpg",
-      title: "Watch",
-      price: 1500,
-    },
-  ];
+
+  // let productsData=[]
+  const [productsData, setProductsData] = useState([])
+
+  /// fetch ---> request to backen/api
+  fetch("https://fakestoreapi.com/products")
+    .then((res) => {
+      return res.json(); //res's type is string ---> convert to json
+    })
+    .then((data) => {
+       console.log(data);
+      //  setProductsData(data)
+    })
+    .catch((error) => {console.log(error);});
 
   return (
     <div className="product-list">
@@ -43,4 +38,4 @@ const ProductList = ({ totalQtyManagement }) => {
   );
 };
 
-export default ProductList
+export default ProductList;
