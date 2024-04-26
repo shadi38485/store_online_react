@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const ProductCard = ({ id, img, title, price, totalQtyManagement }) => {
   const [qty, setQty] = useState(0);
   const [bg, setBg] = useState("bg-white");
 
-
+  // useEffect(() => {
+  //   console.log("sdfsdfsdf");
+  // }, [qty,bg]);
 
   const addToCard = () => {
     setQty(qty + 1);
     console.log(qty);
-    totalQtyManagement()
+    totalQtyManagement();
   };
   const toggleBg = () => {
     if (bg == "bg-white") {
@@ -24,7 +26,7 @@ const ProductCard = ({ id, img, title, price, totalQtyManagement }) => {
     <div className={`product-card ${bg}`} id={id}>
       <img src={img} alt="" />
       <div className="product-properties">
-        <h3>{title}</h3>
+        <h5>{title}</h5>
         <p className="product-price">{price}$</p>
       </div>
       <div className="product-card-footer">
